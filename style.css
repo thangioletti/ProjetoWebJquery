@@ -1,0 +1,53 @@
+.card {
+    border-radius: 20px;
+}
+
+.menu li {
+    padding: 10px;
+}
+
+.menu-list {
+    transform: rotate(90deg);
+}
+
+#modal {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 2;
+    background-color: rgba(0,0,0,.6);
+    display: none;
+}
+
+.modal-active {
+    display: block !important;
+}
+
+#fechar-modal {
+    font-size: 30px;
+    color: #fff;
+}
+
+.form-control input {
+    padding: 10px;
+    background-color: rgb(245 245 244);
+    border-left: 4px solid rgb(127 29 29);
+    width: 100%;
+}
+
+#btn-login {
+    color: white;
+    background-color: rgb(127 29 29) !important;
+    padding: 10px;
+    width: 100%;
+    text-transform: uppercase;
+    border-radius: 20px;
+    font-weight: bold;
+}
+
+.invalid {
+    border: 1px solid rgb(127 29 29) !important;    
+    border-left: 4px solid rgb(127 29 29) !important;
+}

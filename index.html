@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              clifford: "#da373d",
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+  <body>
+    <div id="modal">
+      <a id="fechar-modal" onclick="closeModal()">x</a>
+      <div class="w-screen h-screen flex items-center justify-center">
+        <div id="modal-body" class="w-2/3 h-[80vh] bg-white">
+          <div class="grid grid-cols-2">
+            <div id="lateral-login" class="bg-red-900 h-[80vh] flex items-center">
+              <img src="./produto2.png" alt="produto">
+            </div>
+            <div id="lateral-login-form">
+              <form class="p-20 h-[80vh] flex flex-col justify-center">
+                <h1 class="text-2xl text-red-900 font-bold">Login</h1>
+                <div class="form-control mt-4">
+                  <input type="text" id="email" placeholder="E-mail ID" />
+                </div>
+                <div class="form-control mt-4">
+                  <input type="password" id="senha" placeholder="Password" />
+                </div>
+                <div class="mt-4 flex justify-between">
+                  <span><input type="checkbox" /> Manter logado </span>
+                  <a class="text-red-900">Esqueci a senha</a>
+                </div>
+                <div class="mt-4">
+                  <button type="button" id="btn-login">Login</button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <header class="p-5 bg-red-900 text-white">
+      <div class="container mx-auto flex justify-between">
+        <h1 class="text-4xl">BAR</h1>
+        <div class="open-modal menu-list font-bold text-4xl md:hidden">
+          |||
+        </div>
+        <ul class="menu hidden md:flex">
+          <li class="open-modal">Login</li>
+          <li>Vodka</li>
+          <li>Whisky</li>
+          <li>Vinho</li>
+          <li>Tequila</li>
+        </ul>
+      </div>
+    </header>
+    <div class="container mx-auto mt-4">
+      <div
+        id="container"
+        class="grid grid-cols-1 mx-4 sm:mx-0 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4"
+      >
+        <div class="card border-2 p-2 flex flex-col items-center hidden" id="modelo">
+          <img src="produto.jpg" alt="Produto" class="h-80" />
+          <h1 class="text-sm mt-4">
+            Whisky Wild Turkey 101 Bourbon 1 Litro - Original
+          </h1>
+          <div class="text-2xl my-2 font-bold">R$ <span class="preco"></span></div>
+          <div class="text-sm">
+            em <span class="text-lime-700"><span class="parcelas"></span>x R$ <span class="valor-parcela"></span></span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="index.js"></script>
+  </body>
+</html>
