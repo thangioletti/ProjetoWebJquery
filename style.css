@@ -37,11 +37,10 @@
     width: 100%;
 }
 
-#btn-login {
+.btn {
     color: white;
     background-color: rgb(127 29 29) !important;
     padding: 10px;
-    width: 100%;
     text-transform: uppercase;
     border-radius: 20px;
     font-weight: bold;
